@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="정통.css">
 </head>
 <body>
+    <script type="text/javascript" src="정통.js"></script>
     <header>
         <h1>겜무위키</h1>
     </header>
@@ -14,17 +15,20 @@
             게임장르
         </h2>
         <div id="tagselect">
-            <label>fps<input class="tags" type="checkbox" id="tag_Fps"></label>
-            <label>RPG<input class="tags" type="checkbox" id="tag_Rpt"></label>
-            <label>플랫포머<input class="tags" type="checkbox" id="tag_Platform"></label>
-            <label>시뮬레이션<input class="tags" type="checkbox" id="tag_Simulation"></label>
-            <label>RTS<input class="tags" type="checkbox" id="tag_Rts"></label>
-            <label>공포<input class="tags" type="checkbox" id="tag_Horror"></label>
-            <label>퍼즐<input class="tags" type="checkbox" id="tag_Puzzle"></label>
-            <label>로그라이크<input class="tags" type="checkbox" id="tag_Roglike"></label>
-            <label>격투<input class="tags" type="checkbox" id="tag_Fight"></label>
-            <label>MOBA<input class="tags" type="checkbox" id="tag_Moba"></label>
-            <label>황시온의 특별추천<input class="tags" type="checkbox" id="tag_Hwang"></label>
+            <form action="">
+                전체<input onclick="onChangeTag(event)" name="tags" type="radio" id="noneTagSelected">
+                fps<input onclick="onChangeTag(event)" name="tags" type="radio" id="tag_Fps">
+                RPG<input onclick="onChangeTag(event)" name="tags" type="radio" id="tag_Rpg">
+                플랫포머<input onclick="onChangeTag(event)" name="tags" type="radio" id="tag_Platform">
+                시뮬레이션<input onclick="onChangeTag(event)" name="tags" type="radio" id="tag_Simulation">
+                RTS<input onclick="onChangeTag(event)" name="tags" type="radio" id="tag_Rts">
+                공포<input onclick="onChangeTag(event)" name="tags" type="radio" id="tag_Horror">
+                퍼즐<input onclick="onChangeTag(event)" name="tags" type="radio" id="tag_Puzzle">
+                로그라이크<input onclick="onChangeTag(event)" name="tags" type="radio" id="tag_Roglike">
+                격투<input onclick="onChangeTag(event)" name="tags" type="radio" id="tag_Fight">
+                MOBA<input onclick="onChangeTag(event)" name="tags" type="radio" id="tag_Moba">
+                황시온의 특별추천<input onclick="onChangeTag(event)" name="tags" type="radio" id="tag_Hwang">
+            </form>
         </div>
     </nav>
     <aside>
@@ -37,9 +41,9 @@
             <li><a href=#tags></a>e
         </ul>
     </aside>
-    <div name="tags">
+    <div class="tags">
         <section>
-            <article>
+            <article id="tag_Fps">
                 <h3>fps</h3>
                 <p>
                     <h4>1인칭 슈팅 게임(First Person Shooter).</h4>
@@ -48,7 +52,7 @@
                     내부에 있어서 팔과 손(가끔 발이나 다리)을 제외한 다른 신체는 볼 수 없다.
                 </p>
             </article>
-            <article>
+            <article id="tag_Rpg">
                 <h3>RPG</h3>
                 <p>
                     <h4>Role-Playing Game</h4>
